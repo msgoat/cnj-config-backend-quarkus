@@ -16,17 +16,14 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- runtime related properties -->
         <java.version>17</java.version>
-        <quarkus.version>2.16.3.Final</quarkus.version>
+        <quarkus.version>3.1.0.Final</quarkus.version>
         <quarkus.package.type>uber-jar</quarkus.package.type>
-        <microprofile.version>4.1</microprofile.version>
         <!-- common logging dependencies -->
-        <slf4j.version>1.7.32</slf4j.version>
-        <!-- common rest dependencies -->
-        <common.rest.version>2.0.0</common.rest.version>
+        <slf4j.version>2.0.6</slf4j.version>
         <!-- common test dependencies -->
         <junit.version>5.9.2</junit.version>
         <restassured.version>4.5.1</restassured.version>
-        <cnj.common.test.core.version>1.0.0</cnj.common.test.core.version>
+        <cnj.common.test.core.version>1.1.0</cnj.common.test.core.version>
         <cnj.common.test.javax.version>1.0.0</cnj.common.test.javax.version>
         <!-- docker related properties -->
         <docker.registry.name>docker.cloudtrain.aws.msgoat.eu</docker.registry.name>
