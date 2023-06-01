@@ -1,46 +1,29 @@
 # cnj-config-backend-quarkus
 
-Simplest possible cloud native java application based on Quarkus.
+Cloud native Java backend based demonstrating application configuration with MP Config based on Quarkus.
 
-## Build this application 
+## Status
 
-See [cnj-config](../README.md) for build instructions.
+![Build status](ttps://codebuild.eu-west-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoidURBcHVMS3hEYmZRVlRqN20yUGVCeGlYZk5Fc2tGaEIya0lQRFE0SXdOZCtKQklGODVkTnE4dlBMOVNaWnI3ZGM0VlVhNndUVTk0eUZqT0xzdTdXY2Z3PSIsIml2UGFyYW1ldGVyU3BlYyI6ImpvT0ZFVk1ZSWNnb2VSOXAiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main)
 
-## Exposed REST endpoints
+## Release Information
 
-### /api/v1/hello
+A changelog can be found in [changelog.md](changelog.md).
 
-Returns a simple welcome message user in JSON format
+## Docker Pull Command
 
-Method
-: GET
+`docker pull docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-config-backend-quarkus`
 
-URI
-: /v1/hello
+## Run this application
 
-Parameter(s)
-: none
+```shell 
+docker run --name cnj-config-backend-quarkus -p 8080:8080 docker.cloudtrain.aws.msgoat.eu/cloudtrain/cnj-config-backend-quarkus
+```
 
-Response
-: welcome message as JSON document
+## Build this application
 
-Authentication type
-: none
+```shell 
+mvn clean verify -P pre-commit-stage
+```
 
-Role(s) required
-: none
-
-
-## Exposed environment variables
-
-## Exposed Ports
-
-| Port | Protocol | Description |
-| --- | --- | --- |
-| 8080 | HTTP | HTTP endpoint of this application | 
- 
-## Version / Tags
-
-| Tag(s) | Remarks |
-| --- | --- |
-| latest, 1.0.0 | first release |
+Build results: a Docker image containing a Quarkus application.
