@@ -19,7 +19,7 @@ container:
     image:
       repository: ${docker.image.name}
       tag: ${project.version}
-      pullPolicy: Always # IfNotPresent
+      pullPolicy: IfNotPresent
     ports:
       http:
         number: 8080
@@ -35,7 +35,7 @@ container:
         memory: 1Gi
       requests:
         cpu: 250m
-        memory: 756Mi
+        memory: 1Gi
     securityContext:
       capabilities:
         drop:
