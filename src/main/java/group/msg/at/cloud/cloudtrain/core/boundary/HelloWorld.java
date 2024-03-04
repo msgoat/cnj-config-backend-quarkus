@@ -6,6 +6,7 @@ import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
+import java.util.Locale;
 import java.util.UUID;
 
 /**
@@ -24,6 +25,10 @@ public class HelloWorld {
     int configNumericValue;
 
     public Message getHelloMessage() {
-        return new Message(UUID.randomUUID(), "hello", String.format("Welcome to Cloud Native Java with %s! configNumericValue : %d", this.configStringValue, this.configNumericValue));
+        Message result = new Message(UUID.randomUUID());
+        result.setCode("hello");
+        result.setText(String.format("Welcome to Cloud Native Java with Quarkus! Got values configStringValue=[%s] configNumericValue=[%d]", this.configStringValue, this.configNumericValue));
+        result.setLocale(Locale.GERMAN);
+        return result;
     }
 }
