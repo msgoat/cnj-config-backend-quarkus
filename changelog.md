@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 
-## [8.0.0] - 2024-03-04
+## [8.0.0] - 2024-03-28
 ### Added
 - added new unit-test class MessageTest to make sure Jacoco measures test coverage correctly
 ### Changed

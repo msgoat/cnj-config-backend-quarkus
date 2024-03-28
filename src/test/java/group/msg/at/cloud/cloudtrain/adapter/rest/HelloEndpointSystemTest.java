@@ -43,7 +43,10 @@ public class HelloEndpointSystemTest {
         assertThat(welcomeMessage.getId()).as("message.id must not be empty").isNotNull();
         assertThat(welcomeMessage.getCode()).as("message.code must not be empty").isNotNull();
         assertThat(welcomeMessage.getText()).as("message.text must not be empty").isNotNull();
-        assertThat(welcomeMessage.getText()).as("message.text must start with expected text").startsWith("Welcome to Cloud Native Java with Quarkus");
+        assertThat(welcomeMessage.getText()).as("message.text must start with expected text").isEqualTo("Welcome to Cloud Native Java with Quarkus!");
+        assertThat(welcomeMessage.getStringConfigValue()).as("message.stringConfigValue must not be empty").isNotNull();
+        assertThat(welcomeMessage.getStringConfigValue()).as("message.stringConfigValue must not be default value").doesNotStartWith("???").doesNotEndWith("???");
+        assertThat(welcomeMessage.getNumericConfigValue()).as("message.numericConfigValue must be default value").isNotEqualTo(-1);
         assertThat(welcomeMessage.getLocale()).as("message.locale must not be empty").isNotNull();
     }
 }

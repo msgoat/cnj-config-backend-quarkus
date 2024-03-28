@@ -18,17 +18,20 @@ public class HelloWorld {
 
     @Inject
     @ConfigProperty(name = "cloudtrain.config.stringValue", defaultValue = "???cloudtrain.config.stringValue???")
-    String configStringValue;
+    String stringConfigValue;
+
 
     @Inject
     @ConfigProperty(name = "cloudtrain.config.numericValue", defaultValue = "-1")
-    int configNumericValue;
+    int numericConfigValue;
 
     public Message getHelloMessage() {
         Message result = new Message(UUID.randomUUID());
         result.setCode("hello");
-        result.setText(String.format("Welcome to Cloud Native Java with Quarkus! Got values configStringValue=[%s] configNumericValue=[%d]", this.configStringValue, this.configNumericValue));
-        result.setLocale(Locale.GERMAN);
+        result.setText("Welcome to Cloud Native Java with Quarkus!");
+        result.setStringConfigValue(stringConfigValue);
+        result.setNumericConfigValue(numericConfigValue);
+        result.setLocale(Locale.ENGLISH);
         return result;
     }
 }

@@ -13,6 +13,10 @@ public class Message {
 
     private Locale locale;
 
+    private String stringConfigValue;
+
+    private int numericConfigValue;
+
     public Message() {
         super();
     }
@@ -47,6 +51,22 @@ public class Message {
 
     public void setLocale(Locale locale) {
         this.locale = locale;
+    }
+
+    public String getStringConfigValue() {
+        return stringConfigValue;
+    }
+
+    public void setStringConfigValue(String stringConfigValue) {
+        this.stringConfigValue = stringConfigValue;
+    }
+
+    public int getNumericConfigValue() {
+        return numericConfigValue;
+    }
+
+    public void setNumericConfigValue(int numericConfigValue) {
+        this.numericConfigValue = numericConfigValue;
     }
 
     @Override
